@@ -43,7 +43,7 @@ pipeline{
     }
     stage('Tomcat'){
       steps {
-        echo 'Pushing to Tomcat'
+        echo 'Pushing to Tomcat9'
         deploy adapters: [tomcat9(credentialsId: 'tomcat_cred', path: '', url: 'http://52.14.10.7:7000/')], contextPath: null, war: 'target/*war'
         echo 'Done'
       }
